@@ -1,0 +1,17 @@
+{
+  "worktree": {
+    "setup": [
+      "git submodule update --init --recursive",
+      "npm install --package-lock=false"
+    ],
+    "teardown": "echo \"Setup starts no persistent services; Paseo handles worktree removal.\""
+  },
+  "scripts": {
+    "diff-check": {
+      "command": "git diff --check"
+    },
+    "build": {
+      "command": "npm run build"
+    }
+  }
+}
